@@ -1,14 +1,15 @@
 <!DOCTYPE html>
 <html>
 <body>
-
+{% include 'header.html' %}
+{% include "mymenu.html" with me="TOBIAS" sponsor="W3SCHOOLS" %}
 {% with firstname="Le" %}
   <h1>{{ firstname }}</h1>
 {% endwith %}
 
 <ul>
   {% for x in mymembers %}
-    <li>{{ x.firstname }}</li>
+    <li>{{ x.firstname }} {{ x.lastname }}</li>
   {% endfor %}
 </ul>
 
@@ -26,7 +27,7 @@
   <p>{{ x.year }}</p>
 {% endfor %}
 
-<p>In views.py you can see what the fruits variable looks like.</p>
-
+<p>Modified by Luke.</p>
+{% include 'footer.html' %}
 </body>
 </html>
