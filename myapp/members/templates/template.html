@@ -1,6 +1,9 @@
+{% load static %}
 <!DOCTYPE html>
 <html>
+<link rel="stylesheet" href="{% static 'myfirst.css' %}">
 <body>
+
 {% include 'header.html' %}
 {% include "mymenu.html" with me="TOBIAS" sponsor="W3SCHOOLS" %}
 {% with firstname="Le" %}
@@ -26,6 +29,21 @@
   <p>{{ x.model }}</p>
   <p>{{ x.year }}</p>
 {% endfor %}
+
+<table border='1'>
+  <tr>
+    <th>ID</th>
+    <th>Firstname</th>
+    <th>Lastname</th>
+  </tr>
+  {% for x in mymembers %}
+    <tr>
+      <td>{{ x.id }}</td>
+        <td>{{ x.firstname }}</td>
+      <td>{{ x.lastname }}</td>
+    </tr>
+  {% endfor %}
+</table>
 
 <p>Modified by Luke.</p>
 {% include 'footer.html' %}
