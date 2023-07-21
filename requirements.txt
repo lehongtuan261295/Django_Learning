@@ -1,0 +1,7 @@
+Django~=4.2.3
+pip~=23.2
+setuptools~=68.0.0
+sqlparse~=0.4.4
+tzdata~=2023.3
+wheel~=0.38.4
+whitenoise~=6.5.0
