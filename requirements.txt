@@ -5,3 +5,4 @@ sqlparse~=0.4.4
 tzdata~=2023.3
 wheel~=0.38.4
 whitenoise~=6.5.0
+django-bootstrap-v5~=1.0.11
